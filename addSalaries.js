@@ -1,16 +1,24 @@
+let numberOfCases = 0;
 let sum = 0;
+let salaries = {};
 
-let salaries = {
-  John: 100,
-  Ann: 160,
-  Pete: 130,
-};
-
-for (let key in salaries){
+caseCounter:
+for (let key in salaries) {
+  ++numberOfCases;
   sum += (+salaries[key]);
-  };
- 
-const showSum = () => (alert(`The total salary is ${sum}.`));
+  continue caseCounter;
+}
 
-let showSumSwitch = confirm('Would you like to see the total salary?');
-showSumSwitch ? showSum() : false;
+function addSalary() {
+  if(numberOfCases){
+    alert(`The salary is ${sum}.`)
+  }
+  else{
+    alert('The salary is zero.')
+    }
+}
+
+
+let addSalarySwitch = confirm('Would you like to add the salaries?');
+
+addSalarySwitch ? addSalary() : false;
