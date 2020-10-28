@@ -1,0 +1,21 @@
+let menu = {
+	width: 200,
+	height: 300,
+	title: "My menu"
+};
+
+function multiplyMenu() {
+	multiplier: for (let key in menu) {
+		if (typeof menu[key] == 'number') {
+			menu[key] *= 2;
+		} else {
+			alert(`'${menu[key]}' is not a number.`);
+			continue multiplier;
+		}
+
+	}
+	alert(JSON.stringify(menu, null, 4));
+};
+
+let multiplyMenuSwitch = confirm('Would you like to multiply the menu?');
+multiplyMenuSwitch ? multiplyMenu() : false;
