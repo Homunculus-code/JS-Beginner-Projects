@@ -1,8 +1,8 @@
-let codes = {};
+let schedule = {};
 
 let numberOfCases = 0;
 
-for (let code in codes) {
+for (let code in schedule) {
   ++numberOfCases;
 }
 
